@@ -1,13 +1,24 @@
 function isPalindrome(word) {
-  // Write your algorithm here
-}
+  for (let firstLetter = 0; firstLetter < word.length / 2; firstLetter++)
+  {
+    const lastLetter = word.length - 1 - firstLetter;
+  
+  if (word[firstLetter] !== word[lastLetter]) {
+    return false;
+  }
+  return true;
+}}
 
 /* 
-  Add your pseudocode here
+  1.find word with less than 2 letters
+  2. increment firstWord
+  3. return true if firstWord matches lastWord
 */
 
 /*
-  Add written explanation of your solution here
+
+palindrome words are characters that read the same backward as forward hereby, we need to return true if the word is less than 2 letters, i achieve
+that by looping through the string using the for loop.
 */
 
 // You can run `node index.js` to view these console logs
